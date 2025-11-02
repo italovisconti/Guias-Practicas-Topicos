@@ -1,7 +1,4 @@
 # Guía Práctica II - Resoluciones
-## Preparación para el Primer Parcial
-
----
 
 ## PARTE I: EJERCICIOS PRÁCTICOS
 
