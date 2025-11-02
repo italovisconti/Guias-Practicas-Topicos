@@ -168,15 +168,6 @@ d) `<T extends Array<any>>`
 5.  ¿Podemos asignar la función `drawTriangle()` a una variable de tipo función `(shape: Shape) => void`?
 6.  ¿Podemos asignar una función `getShape(): Shape` a una variable de tipo función `() => Triangle`?
 
-**SUSTITUCIONES PERMITIDAS**
-
-1.  **Sí** Podemos sustituir un `Triangle` (Triángulo) donde sea que se espere un `Shape` (Forma).
-2.  **No** No podemos usar un supertipo en lugar de un subtipo.
-3.  **Sí** Los arrays son **covariantes**, por lo que podemos usar un array de objetos `Triangle` en lugar de un array de objetos `Shape`.
-4.  **Sí** Las funciones son **bivariantes** en sus argumentos en TypeScript, por lo que podemos usar `(shape: Shape) => void` como `(triangle: Triangle) => void`.
-5.  **Sí** Las funciones son **bivariantes** en sus argumentos en TypeScript, por lo que podemos usar `(triangle: Triangle) => void` como `(shape: Shape) => void`.
-6.  **No** Las funciones son bivariantes en sus argumentos pero no en sus tipos de retorno en TypeScript. No podemos usar una función de tipo `() => Shape` como una función de tipo `() => Triangle`.
-
 ---
 
 ### Sección B: Selección Múltiple
