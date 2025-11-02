@@ -214,5 +214,3 @@ b) Permite usar propiedades/métodos de X en T
 c) T solo puede ser X exactamente  
 d) Mejora la seguridad de tipos  
 e) T puede ser más específico que X  
-
----

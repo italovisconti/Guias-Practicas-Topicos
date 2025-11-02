@@ -340,6 +340,8 @@ console.log(userRepo.findById(1)?.age); // 26
 **Respuestas correctas: a, b, d**  
 **Explicación:** Los tipos funcionales permiten tratar funciones como valores, facilitando patrones como Strategy sin clases. Reducen acoplamiento al depender de contratos de función en lugar de tipos concretos. No eliminan la necesidad de clases (son complementarios) ni afectan necesariamente el uso de memoria.
 
+---
+
 #### 6. Sobre genéricos con restricciones `<T extends X>`:
 **a)** T debe tener al menos lo que X tiene ✓  
 **b)** Permite usar propiedades/métodos de X en T ✓  
@@ -355,5 +357,3 @@ Explicación:
 - No exige igualdad exacta: T puede ser un subtipo más específico que X, no solo X puro (c es falso, e es verdadero).  
 - Restringir T reduce errores y proporciona mayor seguridad de tipos al limitar los tipos aceptables (d).
 
-
----
