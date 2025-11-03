@@ -184,6 +184,116 @@ console.log(userRepo.findById(1)?.age); // 26
 
 ---
 
+#### Ejercicio 5: Contenedores Genéricos con Filtrado
+**Resolución:**
+```typescript
+class Elemento<T> {
+  public dato: T;
+
+  constructor(dato: T) {
+    this.dato = dato;
+  }
+
+  public filtrar(predicado: (val: T) => boolean): T[] {
+    // Si el dato cumple el predicado, lo retornamos en un array
+    // Si no, retornamos un array vacío
+    return predicado(this.dato) ? [this.dato] : [];
+  }
+}
+
+class Contenedor<T> extends Elemento<T> {
+  private items: Elemento<T>[];
+
+  constructor(dato: T, items: Elemento<T>[] = []) {
+    super(dato);
+    this.items = items;
+  }
+
+  public override filtrar(predicado: (val: T) => boolean): T[] {
+    const resultados: T[] = [];
+
+    // Verificar si el dato del contenedor cumple el predicado
+    if (predicado(this.dato)) {
+      resultados.push(this.dato);
+    }
+
+    // Filtrar recursivamente cada item
+    for (const item of this.items) {
+      // Llamar a filtrar en cada item (polimorfismo)
+      // Esto funciona tanto para Elemento como para Contenedor
+      const itemResultados = item.filtrar(predicado);
+      resultados.push(...itemResultados);
+    }
+
+    return resultados;
+  }
+}
+
+// USO
+// Funciones de filtrado
+const mayoresA10 = (n: number): boolean => n > 10;
+const pares = (n: number): boolean => n % 2 === 0;
+const menoresA10 = (n: number): boolean => n < 10;
+
+// Crear elementos simples
+const elem1 = new Elemento<number>(5);
+const elem2 = new Elemento<number>(8);
+const elem3 = new Elemento<number>(15);
+const elem4 = new Elemento<number>(20);
+
+// Crear contenedor simple
+const contenedor = new Contenedor<number>(3, [elem1, elem2, elem3]);
+
+console.log("FILTRADO BÁSICO");
+console.log(contenedor.filtrar(mayoresA10)); // Output: [15]
+console.log(contenedor.filtrar(pares)); // Output: [8]
+console.log(contenedor.filtrar(menoresA10)); // Output: [3, 5, 8]
+
+console.log("\nFILTRADO EN ELEMENTO SIMPLE");
+console.log(elem3.filtrar(mayoresA10)); // Output: [15]
+console.log(elem1.filtrar(mayoresA10)); // Output: []
+
+// Ejemplo avanzado: Contenedores anidados
+console.log("\nCONTENEDORES ANIDADOS");
+const subContenedor = new Contenedor<number>(2, [elem1, elem2]);
+const contenedorPrincipal = new Contenedor<number>(1, [subContenedor, elem3, elem4]);
+
+console.log(contenedorPrincipal.filtrar(mayoresA10)); 
+// Output: [15, 20] (solo los valores mayores a 10)
+
+console.log(contenedorPrincipal.filtrar(menoresA10)); 
+// Output: [1, 2, 5, 8] (todos los valores menores a 10)
+
+// Ejemplo con strings
+console.log("\nEJEMPLO CON STRINGS");
+const tieneA = (s: string): boolean => s.includes('a');
+
+const str1 = new Elemento<string>('hola');
+const str2 = new Elemento<string>('mundo');
+const str3 = new Elemento<string>('casa');
+
+const contenedorStrings = new Contenedor<string>('palabra', [str1, str2, str3]);
+
+console.log(contenedorStrings.filtrar(tieneA)); 
+// Output: ['palabra', 'hola', 'casa']
+```
+
+**Explicación:**
+
+1. **Clase Elemento<T>**:
+   - El método `filtrar` evalúa si su propio dato cumple el predicado
+   - Retorna un array con el dato si cumple, o un array vacío si no
+   - Esto mantiene consistencia: siempre retornamos un array de T
+
+2. **Clase Contenedor<T>**:
+   - Primero verifica su propio dato y lo agrega si cumple el predicado
+   - Luego itera sobre cada item llamando a su método `filtrar`
+   - Gracias al **polimorfismo**, no necesita saber si el item es un Elemento o un Contenedor
+   - Usa el operador spread `...` para aplanar los resultados de cada item
+   - Maneja automáticamente estructuras anidadas mediante recursión
+
+---
+
 ## PARTE II: EJERCICIOS TEÓRICOS
 
 ### Sección A: Selección Simple

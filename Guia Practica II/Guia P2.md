@@ -118,6 +118,66 @@ const productRepo = new Repository<Product>();
 
 ---
 
+#### Ejercicio 5: Contenedores Genéricos con Filtrado
+**Conceptos:** Genéricos, funciones de orden superior, polimorfismo
+
+**Planteamiento:**
+En el desarrollo de aplicaciones, frecuentemente necesitamos trabajar con **contenedores de datos** que pueden almacenar diferentes tipos de información y realizar operaciones de filtrado sobre ellos.
+
+Implemente en **TypeScript** las siguientes clases genéricas basándose en las clases proporcionadas:
+
+```typescript
+class Elemento<T> {
+  public dato: T;
+  public filtrar(predicado: (val: T) => boolean): T[]
+}
+
+class Contenedor<T> extends Elemento<T> {
+  private items: Elemento<T>[];
+  public override filtrar(predicado: (val: T) => boolean): T[]
+}
+```
+
+**Requerimientos:**
+
+1. **Clase Elemento<T>**:
+   - El método `filtrar` debe retornar un array con el dato del elemento si cumple el predicado, o un array vacío si no lo cumple.
+
+2. **Clase Contenedor<T>**:
+   - El método `filtrar` debe retornar un array con todos los datos (propios y de los items) que cumplan con el predicado dado.
+   - Debe manejar correctamente la recursión si los items son también Contenedores.
+
+**Ejemplo de uso esperado:**
+
+```typescript
+// Función de filtro: mayores a 10
+const mayoresA10 = (n: number): boolean => n > 10;
+
+// Función de filtro: pares
+const pares = (n: number): boolean => n % 2 === 0;
+
+// Crear elementos
+const elem1 = new Elemento<number>(5);
+const elem2 = new Elemento<number>(8);
+const elem3 = new Elemento<number>(15);
+const elem4 = new Elemento<number>(20);
+
+// Crear contenedor
+const contenedor = new Contenedor<number>(3, [elem1, elem2, elem3]);
+
+// Filtrar: elementos mayores a 10
+console.log(contenedor.filtrar(mayoresA10)); // Output: [15]
+
+// Filtrar en un elemento simple
+console.log(elem3.filtrar(mayoresA10)); // Output: [15]
+console.log(elem1.filtrar(mayoresA10)); // Output: []
+
+// Filtrar pares
+console.log(contenedor.filtrar(pares)); // Output: [8]
+```
+
+---
+
 ## PARTE II: EJERCICIOS TEÓRICOS
 
 ### Sección A: Selección Simple
