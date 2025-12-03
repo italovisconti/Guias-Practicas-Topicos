@@ -370,20 +370,7 @@ describe('LoggingDecorator', () => {
 
 ---
 
-## 9. Comparación: AOP por Diseño vs Herramientas
-
-| Aspecto | SOLID/Decorators | Herramientas (Proxies) |
-|---------|------------------|------------------------|
-| **Compilación** | Verificada en tiempo de compilación | Errores en runtime |
-| **Testing** | Fácil aislar aspectos | Difícil separar |
-| **Debugger** | Stack trace claro | Stack trace confuso |
-| **Acoplamiento** | Bajo (solo interfaces) | Alto (a la herramienta) |
-| **Flexibilidad** | Control total | Limitado por API |
-| **Curva aprendizaje** | Requiere entender SOLID | API más simple |
-
----
-
-## 10. Conclusión
+## 9. Conclusión
 
 > **AOP no requiere herramientas especiales. Se logra con buen diseño orientado a objetos.**
 
@@ -426,7 +413,7 @@ describe('LoggingDecorator', () => {
 
 ---
 
-## 💭 Preguntas de Reflexión
+## Preguntas de Reflexión
 
 1. ¿Por qué es importante que los Decorators cumplan con LSP?
 2. Si tienes 10 aspectos y 20 comandos, ¿cuántos Decorators necesitas con este enfoque vs. el enfoque tradicional?
