@@ -20,7 +20,7 @@ class DatabaseConnection {
 2. ¿Cuál es el propósito de hacer el constructor privado?
 3. ¿En qué situaciones del mundo real usarías este patrón?
 
-#### [[Resoluciones Guías P1#Ejercicio 1: Identificación de Patrones| Solución]]
+#### [[Resoluciones Guías P1#Ejercicio 1: Identificación de Patrones|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-1-identificación-de-patrones)
 ---
 ### Ejercicio 2: Implementación desde UML
 
@@ -51,7 +51,7 @@ Implementa el siguiente diagrama de clases en TypeScript:
 - Agrega un método `describe()` que retorne una descripción de la forma
 - Crea un array de formas mixtas y calcula el área total 
 
-#### [[Resoluciones Guías P1#Ejercicio 2: Implementación desde UML| Solución]]
+#### [[Resoluciones Guías P1#Ejercicio 2: Implementación desde UML|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-2-implementación-desde-uml)
 
 ---
 ### Ejercicio 3: Refactorización con Decorator
@@ -97,7 +97,7 @@ Refactoriza usando el patrón Decorator para:
 - Permitir agregar el mismo ingrediente múltiples veces
 - Mantener la funcionalidad de `calcularPrecio()` y `getDescripcion()`
 
-#### [[Resoluciones Guías P1#Ejercicio 3: Refactorización con Decorator| Solución]]
+#### [[Resoluciones Guías P1#Ejercicio 3: Refactorización con Decorator|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-3-refactorización-con-decorator)
 ---
 ### Ejercicio 4: Sistema de Tarifas UrbanRide
 
@@ -120,5 +120,5 @@ Eres desarrollador en "*UrbanRide*", una aplicación de transporte urbano que ne
     - Mostrar desglose detallado del costo (base + cada recargo)
     - Calcular el precio final total
 
-#### [[Resoluciones Guías P1#Ejercicio 4: Sistema de Tarifas UrbanRide| Solución]]
+#### [[Resoluciones Guías P1#Ejercicio 4: Sistema de Tarifas UrbanRide|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-4-sistema-de-tarifas-urbanride)
 ---
