@@ -1049,7 +1049,40 @@ console.log(total); // Salida: 1188
 ---
 ### Ejercicio 5: Sistema de Archivos Virtual con Composite
 
-Una posible implementación en TypeScript:
+#### Diagrama UML (Patrón Composite)
+
+```mermaid
+classDiagram
+    class ElementoFS {
+        <<interface>>
+        +obtenerNombre() string
+        +obtenerTamano() number
+        +mostrar(indentacion) void
+    }
+
+    class Archivo {
+        -nombre: string
+        -tamano: number
+        +obtenerNombre() string
+        +obtenerTamano() number
+        +mostrar(indentacion) void
+    }
+
+    class Carpeta {
+        -nombre: string
+        -elementos: ElementoFS[]
+        +obtenerNombre() string
+        +obtenerTamano() number
+        +agregar(elemento: ElementoFS) void
+        +mostrar(indentacion) void
+    }
+
+    ElementoFS <|.. Archivo : implementa (Hoja)
+    ElementoFS <|.. Carpeta : implementa (Compuesto)
+    Carpeta o--> ElementoFS : contiene
+```
+
+#### Implementación en TypeScript
 
 ```typescript
 interface ElementoFS {
