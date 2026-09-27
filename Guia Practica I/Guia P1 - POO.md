@@ -125,14 +125,17 @@ Eres desarrollador en "*UrbanRide*", una aplicación de transporte urbano que ne
 
 ### Ejercicio 5: Sistema de Archivos Virtual con Composite
 
-Implementa en **TypeScript** un sistema de archivos virtual. Los archivos tienen un tamaño propio y las carpetas pueden contener archivos u otras carpetas. El cliente debe poder calcular tamaños y mostrar la estructura sin preguntar si un elemento es un archivo o una carpeta (por ejemplo, sin `instanceof Carpeta`).
+Implementa un sistema de archivos virtual donde los archivos individuales y las carpetas puedan tratarse de forma uniforme (sin usar `instanceof`).
 
 **Requisitos:**
+- **Interfaz `ElementoFS`:** métodos `obtenerNombre(): string`, `obtenerTamano(): number` (en KB) y `mostrar(indentacion?: number): void`.
+- **Clase `Archivo` (Hoja):** almacena su nombre y tamaño propio en KB.
+- **Clase `Carpeta` (Compuesto):**
+  - Permite agregar elementos hijos (`ElementoFS[]`).
+  - `obtenerTamano()` calcula la suma recursiva de todos sus elementos.
+  - `mostrar()` imprime el árbol con indentación jerárquica.
 
-1. Define la interfaz `ElementoFS` con `obtenerNombre(): string`, `obtenerTamano(): number` (en KB) y `mostrar(indentacion?: number): void`.
-2. Implementa `Archivo` con nombre y tamaño en KB. `obtenerTamano()` devuelve su tamaño; `mostrar()` imprime su nombre y tamaño.
-3. Implementa `Carpeta` con una lista de `ElementoFS`. Debe tener `agregar(elemento: ElementoFS): void` y, opcionalmente, `eliminar(elemento: ElementoFS): void`. Su tamaño es la suma recursiva de los tamaños de sus hijos; `mostrar()` imprime su nombre e invoca `mostrar()` en cada hijo con mayor indentación.
-4. Construye un **árbol**: cada elemento tiene como máximo una carpeta contenedora y no se permiten ciclos (una carpeta no puede contenerse a sí misma, directa ni indirectamente). Para este ejercicio, puedes asumir que quien construye el árbol respeta esta condición.
+> *Nota: Asume que la estructura es un árbol acíclico (una carpeta no se contiene a sí misma).*
 
 **Ejemplo de uso esperado:**
 
