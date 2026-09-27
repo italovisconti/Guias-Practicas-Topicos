@@ -1,4 +1,4 @@
-### Ejercicio: Identificación de Patrones
+### Ejercicio 1: Identificación de Patrones
 
 Lee el siguiente código y responde:
 ```typescript
@@ -20,28 +20,29 @@ class DatabaseConnection {
 2. ¿Cuál es el propósito de hacer el constructor privado?
 3. ¿En qué situaciones del mundo real usarías este patrón?
 
-#### [[Resoluciones Guías P1#Ejercicio Identificación de Patrones| Solución]]
+#### [[Resoluciones Guías P1#Ejercicio 1: Identificación de Patrones| Solución]]
 ---
-### Ejercicio: Implementación desde UML
+### Ejercicio 2: Implementación desde UML
 
 Implementa el siguiente diagrama de clases en TypeScript:
 
 ```
-┌─────────────────┐
-│   <<interface>> │
-│     Shape       │
-├─────────────────┤
-│ + area(): number│
-│ + draw(): void  │
-└────────▲────────┘
-         │
-    ┌────┴─────┐
-    │          │
-┌───┴───┐  ┌──┴────┐
-│Circle │  │Square │
-├───────┤  ├───────┤
-│-radius│  │-side  │
-└───────┘  └───────┘
+┌─────────────────────┐
+│    <<interface>>    │
+│        Shape        │
+├─────────────────────┤
+│ + area(): number    │
+│ + draw(): void      │
+│ + describe(): string│
+└──────────▲──────────┘
+           │
+     ┌─────┴──────┐
+     │            │
+┌────┴───┐   ┌────┴───┐
+│ Circle │   │ Square │
+├────────┤   ├────────┤
+│ -radius│   │ -side  │
+└────────┘   └────────┘
 ```
 
 **Requisitos**:
@@ -50,10 +51,10 @@ Implementa el siguiente diagrama de clases en TypeScript:
 - Agrega un método `describe()` que retorne una descripción de la forma
 - Crea un array de formas mixtas y calcula el área total 
 
-#### [[Resoluciones Guías P1#Ejercicio Implementación desde UML| Solución]]
+#### [[Resoluciones Guías P1#Ejercicio 2: Implementación desde UML| Solución]]
 
 ---
-### Ejercicio: Refactorización con Decorator
+### Ejercicio 3: Refactorización con Decorator
 
 El siguiente código calcula el precio de pizzas con ingredientes adicionales:
 
@@ -96,9 +97,9 @@ Refactoriza usando el patrón Decorator para:
 - Permitir agregar el mismo ingrediente múltiples veces
 - Mantener la funcionalidad de `calcularPrecio()` y `getDescripcion()`
 
-#### [[Resoluciones Guías P1#Ejercicio 5 Refactorización con Decorator| Solución]]
+#### [[Resoluciones Guías P1#Ejercicio 3: Refactorización con Decorator| Solución]]
 ---
-### Ejercicio: Sistema de Tarifas UrbanRide
+### Ejercicio 4: Sistema de Tarifas UrbanRide
 
 Eres desarrollador en "*UrbanRide*", una aplicación de transporte urbano que necesita calcular tarifas dinámicas para sus viajes. El sistema debe ser lo suficientemente flexible para adaptarse a diferentes tipos de viajes y aplicar recargos según las circunstancias.
 
@@ -119,6 +120,5 @@ Eres desarrollador en "*UrbanRide*", una aplicación de transporte urbano que ne
     - Mostrar desglose detallado del costo (base + cada recargo)
     - Calcular el precio final total
 
-#### [[Resoluciones Guías P1#Ejercicio Sistema de Tarifas UrbanRide| Solución]]
+#### [[Resoluciones Guías P1#Ejercicio 4: Sistema de Tarifas UrbanRide| Solución]]
 ---
-

@@ -13,3 +13,8 @@ Material práctico y ejercicios para los estudiantes de la asignatura **Tópicos
 - **[Torneo Pokémon Asíncrono](./Torneo%20Pokemon%20Asincrono/)**: Práctica de asincronía y consumo de APIs con PokeAPI y TypeScript.
 - **[Manejadores de Paquetes](./Manejadores%20de%20Paquetes/)**: Práctica en parejas para creación y consumo de librerías con npm y GitHub.
 - **[AOP (Programación Orientada a Aspectos)](./AOP/)**: Refactorización de un sistema de pedidos aplicando separación de conceptos con AOP.
+
+### Recursos y Cheatsheets
+- **[Cheatsheets](./Cheatsheets/)**:
+  - **[TypeScript](./Cheatsheets/TypeScript/)**: Hojas de referencia rápida en PDF (Classes, Interfaces, Types y Control Flow Analysis).
+  - **[Patrones de Diseño](./Cheatsheets/Patrones/)**: Resumen visual de patrones de diseño GoF (Creacionales, Estructurales y de Comportamiento).

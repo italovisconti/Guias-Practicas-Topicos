@@ -1,4 +1,4 @@
-### Ejercicio: Identificación de Patrones
+### Ejercicio 1: Identificación de Patrones
 
 Lee el siguiente código y responde:
 ```typescript
@@ -294,7 +294,7 @@ manager.enviarPorTodosLosCanales(usuario, notificacion);
 - Necesitas herencia de comportamiento entre estrategias
 
 ---
-### Ejercicio: Refactorización con Decorator
+### Ejercicio 3: Refactorización con Decorator
 
 El siguiente código calcula el precio de pizzas con ingredientes adicionales:
 
@@ -719,7 +719,7 @@ console.log(operacion2(2)); // 14
 ```
 
 ---
-### Ejercicio: Sistema de Tarifas UrbanRide
+### Ejercicio 4: Sistema de Tarifas UrbanRide
 
 Eres desarrollador en "*UrbanRide*", una aplicación de transporte urbano que necesita calcular tarifas dinámicas para sus viajes. El sistema debe ser lo suficientemente flexible para adaptarse a diferentes tipos de viajes y aplicar recargos según las circunstancias.
 
@@ -884,26 +884,27 @@ console.log(descripcion);
 
 ---
 
-### Ejercicio: Implementación desde UML
+### Ejercicio 2: Implementación desde UML
 
 Implementa el siguiente diagrama de clases en TypeScript:
 
 ```
-┌─────────────────┐
-│   <<interface>> │
-│     Shape       │
-├─────────────────┤
-│ + area(): number│
-│ + draw(): void  │
-└────────▲────────┘
-         │
-    ┌────┴─────┐
-    │          │
-┌───┴───┐  ┌──┴────┐
-│Circle │  │Square │
-├───────┤  ├───────┤
-│-radius│  │-side  │
-└───────┘  └───────┘
+┌─────────────────────┐
+│    <<interface>>    │
+│        Shape        │
+├─────────────────────┤
+│ + area(): number    │
+│ + draw(): void      │
+│ + describe(): string│
+└──────────▲──────────┘
+           │
+     ┌─────┴──────┐
+     │            │
+┌────┴───┐   ┌────┴───┐
+│ Circle │   │ Square │
+├────────┤   ├────────┤
+│ -radius│   │ -side  │
+└────────┘   └────────┘
 ```
 
 **Requisitos**:
