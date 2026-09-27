@@ -36,7 +36,7 @@ console.log(total);
 - Todo debe hacerse en una sola expresión encadenada
 - El código debe ser más legible que el original
 
-#### [[Resoluciones Guías P1#Ejercicio 1: De Imperativo a Funcional|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-1-de-imperativo-a-funcional)
+#### [[Resoluciones Guías P1#Ejercicio 1 (Funcional): De Imperativo a Funcional|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-1-funcional-de-imperativo-a-funcional)
 ---
 ### Ejercicio 2: Operaciones Simples en Árbol Binario
 
@@ -59,7 +59,7 @@ function count(node: Node | null): number
 
 Considere los casos borde (árbol vacío, un solo nodo, etc.)
 
-#### [[Resoluciones Guías P1#Ejercicio 2: Operaciones Simples en Árbol Binario|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-2-operaciones-simples-en-árbol-binario)
+#### [[Resoluciones Guías P1#Ejercicio 2 (Funcional): Operaciones Simples en Árbol Binario|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-2-funcional-operaciones-simples-en-árbol-binario)
 
 ---
 ### Ejercicio 3: Transformación de Árbol
@@ -81,7 +81,7 @@ Ejemplos:
 
 **Importante:** No debe modificar el árbol original, debe crear uno nuevo.
 
-#### [[Resoluciones Guías P1#Ejercicio 3: Transformación de Árbol|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-3-transformación-de-árbol)
+#### [[Resoluciones Guías P1#Ejercicio 3 (Funcional): Transformación de Árbol|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-3-funcional-transformación-de-árbol)
 
 ---
 ### Ejercicio 4: Árboles N-arios
@@ -104,7 +104,7 @@ Esta función permite realizar operaciones como:
 - Si `f = (curr, acc) => Math.max(curr, acc)`, encuentra el valor máximo
 - Si `f = (curr, acc) => acc + 1`, cuenta la cantidad de nodos
 
-#### [[Resoluciones Guías P1#Ejercicio 4: Árboles N-arios|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-4-árboles-n-arios)
+#### [[Resoluciones Guías P1#Ejercicio 4 (Funcional): Árboles N-arios|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-4-funcional-árboles-n-arios)
 
 ---
 ### Ejercicio 5: Composición de Funciones
@@ -140,7 +140,7 @@ console.log(operacion2(2));
 2. Deben funcionar con cualquier cantidad de funciones.
 3. Ambas implementaciones (`compose` y `pipe`) deben ser independientes.
 
-#### [[Resoluciones Guías P1#Ejercicio 5: Composición de Funciones|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-5-composición-de-funciones)
+#### [[Resoluciones Guías P1#Ejercicio 5 (Funcional): Composición de Funciones|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-5-funcional-composición-de-funciones)
 
 ---
 ### Ejercicio 6: Sistema de Notificaciones con Strategy
@@ -162,7 +162,7 @@ Diseña un sistema de notificaciones para una aplicación que puede enviar mensa
 
 **Bonus**: Implementa un "NotificationManager" que pueda enviar por múltiples canales simultáneamente.
 
-#### [[Resoluciones Guías P1#Ejercicio 6: Sistema de Notificaciones con Strategy|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-6-sistema-de-notificaciones-con-strategy)
+#### [[Resoluciones Guías P1#Ejercicio 6 (Funcional): Sistema de Notificaciones con Strategy|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-6-funcional-sistema-de-notificaciones-con-strategy)
 
 ---
 ### Conceptos Clave 

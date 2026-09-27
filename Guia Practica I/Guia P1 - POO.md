@@ -20,7 +20,7 @@ class DatabaseConnection {
 2. ¿Cuál es el propósito de hacer el constructor privado?
 3. ¿En qué situaciones del mundo real usarías este patrón?
 
-#### [[Resoluciones Guías P1#Ejercicio 1: Identificación de Patrones|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-1-identificación-de-patrones)
+#### [[Resoluciones Guías P1#Ejercicio 1 (POO): Identificación de Patrones|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-1-poo-identificación-de-patrones)
 ---
 ### Ejercicio 2: Implementación desde UML
 
@@ -51,7 +51,7 @@ Implementa el siguiente diagrama de clases en TypeScript:
 - Agrega un método `describe()` que retorne una descripción de la forma
 - Crea un array de formas mixtas y calcula el área total 
 
-#### [[Resoluciones Guías P1#Ejercicio 2: Implementación desde UML|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-2-implementación-desde-uml)
+#### [[Resoluciones Guías P1#Ejercicio 2 (POO): Implementación desde UML|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-2-poo-implementación-desde-uml)
 
 ---
 ### Ejercicio 3: Refactorización con Decorator
@@ -97,7 +97,7 @@ Refactoriza usando el patrón Decorator para:
 - Permitir agregar el mismo ingrediente múltiples veces
 - Mantener la funcionalidad de `calcularPrecio()` y `getDescripcion()`
 
-#### [[Resoluciones Guías P1#Ejercicio 3: Refactorización con Decorator|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-3-refactorización-con-decorator)
+#### [[Resoluciones Guías P1#Ejercicio 3 (POO): Refactorización con Decorator|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-3-poo-refactorización-con-decorator)
 ---
 ### Ejercicio 4: Sistema de Tarifas UrbanRide
 
@@ -120,7 +120,7 @@ Eres desarrollador en "*UrbanRide*", una aplicación de transporte urbano que ne
     - Mostrar desglose detallado del costo (base + cada recargo)
     - Calcular el precio final total
 
-#### [[Resoluciones Guías P1#Ejercicio 4: Sistema de Tarifas UrbanRide|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-4-sistema-de-tarifas-urbanride)
+#### [[Resoluciones Guías P1#Ejercicio 4 (POO): Sistema de Tarifas UrbanRide|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-4-poo-sistema-de-tarifas-urbanride)
 ---
 
 ### Ejercicio 5: Sistema de Archivos Virtual con Composite
@@ -178,7 +178,6 @@ Estructura de archivos:
 1. ¿Por qué `Carpeta` almacena una lista de `ElementoFS` y no de `Archivo`?
 2. Si se agrega un `EnlaceSimbolico` que implementa `ElementoFS`, ¿hay que modificar `Carpeta`? ¿Qué principio SOLID se ilustra? Antes de implementarlo, ¿qué habría que decidir sobre el tamaño que informa un enlace?
 
-#### [[Resoluciones Guías P1#Ejercicio 5: Sistema de Archivos Virtual con Composite|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-5-sistema-de-archivos-virtual-con-composite)
+#### [[Resoluciones Guías P1#Ejercicio 5 (POO): Sistema de Archivos Virtual con Composite|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-5-poo-sistema-de-archivos-virtual-con-composite)
 ---
 <!-- 🤫 -->
-
