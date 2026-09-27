@@ -46,7 +46,7 @@ El patrón Singleton es útil en situaciones donde se necesita una única instan
     Por ejemplo, un servicio que interactúe con una impresora o maneje acceso a un archivo compartido.
 
 ---
-### Ejercicio: Sistema de Notificaciones con Strategy
+### Ejercicio 6: Sistema de Notificaciones con Strategy
 
 Diseña un sistema de notificaciones para una aplicación que puede enviar mensajes por:
 - Email
@@ -432,11 +432,11 @@ console.log(`Precio: $${pizza3.calcularPrecio()}\n`);
 ```
 
 ---
-## Operaciones Simples en Árbol Binario
+### Ejercicio 2: Operaciones Simples en Árbol Binario
 
-Usando el tipo `Node`:
+Usando el tipo `Node`:
 
-`type Node = {value: number; left: Node | null; rigth: Node | null;}`
+`type Node = {value: number; left: Node | null; right: Node | null;}`
 
 Implemente las siguientes tres funciones independientes:
 ```ts
@@ -501,11 +501,11 @@ console.log(count(tree)); // 5
 ```
 
 ---
-### Ejercicio: Transformación de Árbol
+### Ejercicio 3: Transformación de Árbol
 
-Usando el tipo `Node`:
+Usando el tipo `Node`:
 
-`type Node = {value: number; left: Node | null; rigth: Node | null;}`
+`type Node = {value: number; left: Node | null; right: Node | null;}`
 
 Implemente:
 ```ts
@@ -560,7 +560,7 @@ const doubled = transform(tree, x => x * 2);
 ```
 
 ---
-## Ejercicio: Árboles N-arios
+### Ejercicio 4: Árboles N-arios
 
 Considere el siguiente tipo que modela un árbol n-ario (cada nodo puede tener cualquier cantidad de hijos):
 ```ts
@@ -651,7 +651,7 @@ La función procesa el árbol en **pre-order** (primero el nodo, luego los hij
 4. Retorna el resultado final
 
 ---
-### **Ejercicio: Composición de Funciones**
+### Ejercicio 5: Composición de Funciones
 
 Componer funciones para crear pipelines de transformación.
 Implementa dos funciones:
@@ -990,7 +990,7 @@ console.log(`El área total de las formas es: ${totalArea.toFixed(2)}`);
 ```
 
 ---
-### Ejercicio: De Imperativo a Funcional
+### Ejercicio 1: De Imperativo a Funcional
 
 Refactoriza el siguiente código imperativo para usar programación funcional (map, filter, reduce):
 

@@ -1,4 +1,4 @@
-### Ejercicio: De Imperativo a Funcional
+### Ejercicio 1: De Imperativo a Funcional
 
 Refactoriza el siguiente código imperativo para usar programación funcional (map, filter, reduce):
 
@@ -36,13 +36,13 @@ console.log(total);
 - Todo debe hacerse en una sola expresión encadenada
 - El código debe ser más legible que el original
 
-#### [[Resoluciones Guías P1#Ejercicio De Imperativo a Funcional| Solución]]
+#### [[Resoluciones Guías P1#Ejercicio 1: De Imperativo a Funcional|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-1-de-imperativo-a-funcional)
 ---
-### Ejercicio: Operaciones Simples en Árbol Binario
+### Ejercicio 2: Operaciones Simples en Árbol Binario
 
-Usando el tipo `Node`:
+Usando el tipo `Node`:
 
-`type Node = {value: number; left: Node | null; rigth: Node | null;}`
+`type Node = {value: number; left: Node | null; right: Node | null;}`
 
 Implemente las siguientes tres funciones independientes:
 
@@ -59,31 +59,32 @@ function count(node: Node | null): number
 
 Considere los casos borde (árbol vacío, un solo nodo, etc.)
 
-#### [[Resoluciones Guías P1#Operaciones Simples en Árbol Binario| Solución]]
+#### [[Resoluciones Guías P1#Ejercicio 2: Operaciones Simples en Árbol Binario|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-2-operaciones-simples-en-árbol-binario)
 
 ---
-### Ejercicio: Transformación de Árbol
+### Ejercicio 3: Transformación de Árbol
 
-Usando el tipo `Node`:
+Usando el tipo `Node`:
 
-`type Node = {value: number; left: Node | null; rigth: Node | null;}`
+`type Node = {value: number; left: Node | null; right: Node | null;}`
 
 Implemente:
 ```ts
 function transform(node: Node | null, f: (value: number) => number): Node | null
 ```
 
-Esta función debe crear un **nuevo árbol** con la misma estructura, pero aplicando la función `f` a cada valor.
+Esta función debe crear un **nuevo árbol** con la misma estructura, pero aplicando la función `f` a cada valor.
 
 Ejemplos:
-- Si `f = (x) => x * 2`, duplica todos los valores
-- Si `f = (x) => x % 2 === 0 ? x : 0`, reemplaza impares con 0
+- Si `f = (x) => x * 2`, duplica todos los valores
+- Si `f = (x) => x % 2 === 0 ? x : 0`, reemplaza impares con 0
 
-**Importante:** No debe modificar el árbol original, debe crear uno nuevo.
-#### [[Resoluciones Guías P1#Ejercicio Transformación de Árbol| Solución]]
+**Importante:** No debe modificar el árbol original, debe crear uno nuevo.
+
+#### [[Resoluciones Guías P1#Ejercicio 3: Transformación de Árbol|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-3-transformación-de-árbol)
 
 ---
-### Ejercicio: Árboles N-arios
+### Ejercicio 4: Árboles N-arios
 
 Considere el siguiente tipo que modela un árbol n-ario (cada nodo puede tener cualquier cantidad de hijos):
 ```ts
@@ -99,13 +100,14 @@ function fold(node: TreeNode, f: (current: number, accumulated: number) => numbe
 ```
 
 Esta función permite realizar operaciones como:
-- Si `f = (curr, acc) => curr + acc`, calcula la suma de todos los valores
-- Si `f = (curr, acc) => Math.max(curr, acc)`, encuentra el valor máximo
-- Si `f = (curr, acc) => acc + 1`, cuenta la cantidad de nodos
-#### [[Resoluciones Guías P1#Ejercicio Árboles N-arios| Solución]]
+- Si `f = (curr, acc) => curr + acc`, calcula la suma de todos los valores
+- Si `f = (curr, acc) => Math.max(curr, acc)`, encuentra el valor máximo
+- Si `f = (curr, acc) => acc + 1`, cuenta la cantidad de nodos
+
+#### [[Resoluciones Guías P1#Ejercicio 4: Árboles N-arios|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-4-árboles-n-arios)
 
 ---
-### **Ejercicio: Composición de Funciones**
+### Ejercicio 5: Composición de Funciones
 
 Componer funciones para crear pipelines de transformación.
 
@@ -136,11 +138,12 @@ console.log(operacion2(2));
 
 1. Las funciones deben aceptar únicamente funciones que operen sobre números.
 2. Deben funcionar con cualquier cantidad de funciones.
-3. Ambas implementaciones (`compose` y `pipe`) deben ser independientes.
-#### [[Resoluciones Guías P1#**Ejercicio Composición de Funciones**| Solución]]
+3. Ambas implementaciones (`compose` y `pipe`) deben ser independientes.
+
+#### [[Resoluciones Guías P1#Ejercicio 5: Composición de Funciones|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-5-composición-de-funciones)
 
 ---
-### Ejercicio: Sistema de Notificaciones con Strategy
+### Ejercicio 6: Sistema de Notificaciones con Strategy
 **Tipo**: Implementación desde planteamiento
 
 **Planteamiento**:
@@ -158,7 +161,8 @@ Diseña un sistema de notificaciones para una aplicación que puede enviar mensa
 5. Crea un ejemplo donde se envíe la misma notificación por diferentes canales
 
 **Bonus**: Implementa un "NotificationManager" que pueda enviar por múltiples canales simultáneamente.
-#### [[Resoluciones Guías P1#Ejercicio 4 Sistema de Notificaciones con Strategy| Solución]]
+
+#### [[Resoluciones Guías P1#Ejercicio 6: Sistema de Notificaciones con Strategy|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-6-sistema-de-notificaciones-con-strategy)
 
 ---
 ### Conceptos Clave 
