@@ -180,3 +180,5 @@ Estructura de archivos:
 
 #### [[Resoluciones Guías P1#Ejercicio 5: Sistema de Archivos Virtual con Composite|Solución (Obsidian)]] · [Ver en GitHub](./Resoluciones%20Guías%20P1.md#ejercicio-5-sistema-de-archivos-virtual-con-composite)
 ---
+<!-- 🤫 -->
+
