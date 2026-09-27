@@ -1045,3 +1045,91 @@ const total = productos
 
 console.log(total); // Salida: 1188
 ```
+
+---
+### Ejercicio 5: Sistema de Archivos Virtual con Composite
+
+Una posible implementación en TypeScript:
+
+```typescript
+interface ElementoFS {
+  obtenerNombre(): string;
+  obtenerTamano(): number;
+  mostrar(indentacion?: number): void;
+}
+
+class Archivo implements ElementoFS {
+  private nombre: string;
+  private tamano: number;
+
+  constructor(nombre: string, tamano: number) {
+    this.nombre = nombre;
+    this.tamano = tamano;
+  }
+
+  obtenerNombre(): string {
+    return this.nombre;
+  }
+
+  obtenerTamano(): number {
+    return this.tamano;
+  }
+
+  mostrar(indentacion: number = 0): void {
+    console.log(`${" ".repeat(indentacion)}📄 ${this.obtenerNombre()} (${this.obtenerTamano()} KB)`);
+  }
+}
+
+class Carpeta implements ElementoFS {
+  private elementos: ElementoFS[] = [];
+  private nombre: string;
+
+  constructor(nombre: string) {
+    this.nombre = nombre;
+  }
+
+  obtenerNombre(): string {
+    return this.nombre;
+  }
+
+  agregar(elemento: ElementoFS): void {
+    this.elementos.push(elemento);
+  }
+
+  obtenerTamano(): number {
+    return this.elementos.reduce((total, elemento) => total + elemento.obtenerTamano(), 0);
+  }
+
+  mostrar(indentacion: number = 0): void {
+    console.log(`${" ".repeat(indentacion)}📁 ${this.obtenerNombre()} (${this.obtenerTamano()} KB)`);
+    for (const elemento of this.elementos) {
+      elemento.mostrar(indentacion + 2);
+    }
+  }
+}
+
+const resume = new Archivo("cv.pdf", 500);
+const photo = new Archivo("foto_perfil.png", 1200);
+const config = new Archivo(".env", 50);
+const script = new Archivo("deploy.sh", 150);
+
+const subcarpeta = new Carpeta("Scripts");
+subcarpeta.agregar(script);
+subcarpeta.agregar(config);
+
+const carpetaRaiz = new Carpeta("MiProyecto");
+carpetaRaiz.agregar(resume);
+carpetaRaiz.agregar(photo);
+carpetaRaiz.agregar(subcarpeta);
+
+console.log(`Tamaño total: ${carpetaRaiz.obtenerTamano()} KB`);
+console.log("\nEstructura de archivos:");
+carpetaRaiz.mostrar();
+```
+
+`Archivo` es una **hoja** y `Carpeta` es el **compuesto**. Ambos cumplen `ElementoFS`: al calcular el tamaño o imprimir cada hijo, `Carpeta` llama al mismo método sin distinguir su tipo. La recursión ocurre cuando ese hijo también es una carpeta. El ejemplo presupone un árbol sin ciclos y sin elementos compartidos entre carpetas; `agregar` no valida esas condiciones.
+
+**Respuestas a las preguntas:**
+
+1. Una carpeta debe poder contener tanto archivos como subcarpetas. La interfaz `ElementoFS` permite tratar ambos de manera uniforme; una lista de `Archivo` excluiría a las carpetas.
+2. Si `EnlaceSimbolico` implementa `ElementoFS`, `Carpeta` no necesita cambiar: es un ejemplo del **principio abierto/cerrado** (extender el sistema sin modificar el compuesto). Hay que definir antes si `obtenerTamano()` del enlace devuelve el espacio que ocupa el propio enlace o el tamaño de su destino; si apunta a una carpeta, seguirlo también podría introducir ciclos. Una política posible es contar solo el espacio del enlace y mostrar el destino como texto, sin recorrerlo.
