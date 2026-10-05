@@ -1041,7 +1041,7 @@ enviarPorMultiplesCanales(
     notificacion
 );
 ```
-## Con Strategy POO
+#### Con Strategy POO
 
 ```typescript
 // Tipos
@@ -1159,9 +1159,9 @@ manager
 
 manager.enviarPorTodosLosCanales(usuario, notificacion);
 ```
-## Comparación de uso
+#### Comparación de uso
 
-### Strategy Funcional 
+##### Strategy Funcional 
 **Ventajas:**
 - Menos boilerplate
 - Más fácil de testear (funciones puras)
@@ -1172,7 +1172,7 @@ manager.enviarPorTodosLosCanales(usuario, notificacion);
 - Prefieres programación funcional
 - Necesitas mayor flexibilidad para combinar estrategias
 
-### Strategy POO 
+##### Strategy POO 
 **Ventajas:**
 - Mejor para estrategias con estado interno
 - Encapsulación clara de comportamiento
