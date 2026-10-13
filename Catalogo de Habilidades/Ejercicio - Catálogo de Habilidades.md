@@ -1,4 +1,10 @@
 
+# Ejercicio — Catálogo de Habilidades
+
+<p align="center">
+  <img src="./ucabilia-logo.svg" alt="UCABILIA — Catálogo de Habilidades" width="500">
+</p>
+
 Estás en **UCABILIA**, un juego de rol por turnos. Cada personaje puede *usar habilidades*: un golpe de espada, una bola de fuego, una curación, etc. 
 
 Lamentablemente, a día de hoy la clase `Personaje` decide la habilidad con un `switch`, y cada habilidad nueva obliga a modificar esa misma clase:

@@ -6,10 +6,6 @@
 
 `Personaje` es el **contexto** de Strategy: no implementa ningún ataque, solo **delega** en un objeto `IHabilidad`. La pregunta "¿de dónde sale esa habilidad?" la responde el **registro**, que resuelve dos cosas a la vez: **crea/selecciona** estrategias (Factory) y garantiza que exista **una sola fuente de verdad** de qué habilidades hay (Singleton).
 
-<p align="center">
-  <img src="./catalogo-habilidades.svg" alt="Diagrama de Arquitectura — Catálogo de Habilidades" width="700">
-</p>
-
 ## 2. Diagrama de clases (propuesta)
 
 ```mermaid

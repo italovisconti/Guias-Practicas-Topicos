@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./ucabilia-logo.svg" alt="UCABILIA — Catálogo de Habilidades" width="520">
+</p>
+
 # Catálogo de Habilidades (UCABILIA)
 
 Ejercicio práctico para la aplicación combinada de patrones de diseño en TypeScript: **Strategy**, **Singleton** y **Factory**.
@@ -6,9 +10,3 @@ Ejercicio práctico para la aplicación combinada de patrones de diseño en Type
 
 - **[Ejercicio — Catálogo de Habilidades](./Ejercicio%20-%20Cat%C3%A1logo%20de%20Habilidades.md)**: Enunciado, contexto del juego y requisitos a cumplir.
 - **[Resolución — Catálogo de Habilidades](./Resoluci%C3%B3n%20-%20Cat%C3%A1logo%20de%20Habilidades.md)**: Diseño propuesto, diagrama de clases y solución completa explicada.
-
-## Arquitectura
-
-<p align="center">
-  <img src="./catalogo-habilidades.svg" alt="Diagrama de Arquitectura — Catálogo de Habilidades" width="700">
-</p>
