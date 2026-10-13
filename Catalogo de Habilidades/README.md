@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./ucabilia-logo.svg" alt="UCABILIA — Catálogo de Habilidades" width="520">
+  <img src="./ucabilia.svg" alt="UCABILIA" width="520">
 </p>
 
 # Catálogo de Habilidades (UCABILIA)
